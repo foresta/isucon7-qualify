@@ -16,6 +16,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
+    "github.com/pkg/profile"
 
 	"github.com/go-sql-driver/mysql"
 	"github.com/gorilla/sessions"
@@ -721,6 +722,8 @@ func tRange(a, b int64) []int64 {
 }
 
 func main() {
+    defer profile.Start(profile.ProfilePath("/home/isucon/profile")).Stop()
+
 	e := echo.New()
 	funcs := template.FuncMap{
 		"add":    tAdd,
