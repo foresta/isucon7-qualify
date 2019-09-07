@@ -24,3 +24,7 @@
 [[constraint]]
   branch = "master"
   name = "github.com/jmoiron/sqlx"
+
+[[constraint]]
+  name = "github.com/pkg/profile"
+  version = "v1.3.0"
